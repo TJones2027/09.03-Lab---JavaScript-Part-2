@@ -15,13 +15,30 @@ function isStrongPassword(password) {
     return false;
   }
 
-  // Check if password contains at least one uppercase letter
+
   if (!/[A-Z]/.test(password)) {
+
     return false;
   }
 
-  // If all conditions pass
+
   return true;
+}
+
+function checkPassword(){
+      const password = document.getElementById("password").value;
+      if(isStrongPassword(password)){
+        alert("Well Done! Your password is strong!")
+      }
+      else{
+        alert("IS")
+        alert("THIS")
+        alert("A GAME")
+        alert("TO YOU?")
+        alert("YOU ARE GOING TO LOSE")
+        alert("E V E R Y T H I N G")
+        alert("IF YOU KEEP THIS UP")
+      }
 }
 
 // This function will be called when the link is clicked
