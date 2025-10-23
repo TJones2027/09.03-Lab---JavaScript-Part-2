@@ -3,6 +3,27 @@
 function sayHello() {
     alert("Hello, world from javascript!");
 }
+
+function isStrongPassword(password) {
+  // Check if password has at least 8 characters
+  if (password.length < 8) {
+    return false;
+  }
+
+  // Check if password contains "password" (case-insensitive)
+  if (password.toLowerCase().includes("password")) {
+    return false;
+  }
+
+  // Check if password contains at least one uppercase letter
+  if (!/[A-Z]/.test(password)) {
+    return false;
+  }
+
+  // If all conditions pass
+  return true;
+}
+
 // This function will be called when the link is clicked
 // It shows an alert with a message
 // Ensure the DOM is fully loaded before attaching the event listener
